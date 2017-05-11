@@ -2,7 +2,7 @@ FROM hortonworks/ambari-base:7.2-v7
 MAINTAINER Hortonworks
 
 # add ambari repo
-ADD ambari.repo /etc/yum.repos.d/
+ADD http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.4.2.0/ambari.repo /etc/yum.repos.d/
 
 RUN yum install -y  ambari-agent && yum clean all
 #RUN find /etc/rc.d/rc* -name "*ambari-agent" | xargs rm -v
